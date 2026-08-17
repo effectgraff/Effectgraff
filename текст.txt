@@ -1,0 +1,8 @@
+curl -L 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663884898982/TGHVkcBEzpQgYglX.zip' -o effectgraff.zip
+unzip -o effectgraff.zip
+rm effectgraff.zip
+git add .
+git config user.name 'EffectGraff'
+git config user.email 'effectgraff@yandex.ru'
+git commit -m 'Add EffectGraff portfolio and Yandex deployment workflow'
+git push origin main
