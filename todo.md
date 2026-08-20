@@ -1,0 +1,283 @@
+# EffectGraff launch checklist
+
+- [ ] Add SEO title, description, canonical, Open Graph, Twitter Card, and structured data for an artist collective.
+- [ ] Choose a lead-generation domain name and verify it in Management UI before purchase.
+- [ ] Update canonical and sitemap after the final domain is confirmed.
+- [ ] Add commercial-project and open-call lead-generation copy with mailto, Instagram, and phone CTAs.
+- [ ] Add robots.txt and sitemap.xml for crawlability.
+- [ ] Verify responsive layout and contact links at desktop and mobile widths.
+- [x] Replace gallery labels with exact work titles and geography from the supplied portfolio PDF.
+- [x] Verify every displayed label against the source PDF before checkpointing.
+- [ ] Replace the page-31 location with Santiago and rename the page-30 festival to DAKING jam per user instruction.
+- [ ] Recheck the two updated labels and save a new checkpoint.
+- [ ] Update the collective description to six artists representing Saint Petersburg, Nizhnevartovsk, Krasnoyarsk, and Vladivostok.
+- [x] Replace the selected work title with «Хамить на щит кафе» while preserving its current geography.
+- [x] Replace the same work title with «Коктебель» per latest user instruction.
+- [x] Set the «Коктебель» card geography to Коктебель and project caption to «В рамках фестиваля „Щит Кафы“».
+- [x] Replace generated logos with the user-supplied EG Club logo from eg_club.pdf.
+- [x] Add a pulsing CTA button that opens the contact flow and respects prefers-reduced-motion.
+- [x] Add a free-to-use calm instrumental ethnic loop with manual play/pause control.
+- [x] Add all 32 PDF portfolio pages to the Archive gallery and preserve lightbox viewing.
+- [ ] Audit mobile layout at 375px and 768px widths.
+- [ ] Measure asset weights and optimize the full archive for faster loading.
+- [ ] Verify published-site loading and save a performance checkpoint.
+- [ ] Verify full-archive loading on desktop and mobile.
+- [ ] Verify audio controls and browser-safe non-autoplay behavior.
+- [ ] Verify the current public files and free hosting configuration.
+- [x] Keep the previous working Manus domain.
+- [ ] Audit SEO titles, descriptions, headings, sitemap, and structured data for organic discovery.
+- [x] Add search-oriented copy for commercial graffiti, mural, festival, and open-call queries.
+- [ ] Start combined free SEO content plan and recurring technical/indexation monitoring.
+- [ ] Confirm the monitoring frequency and delivery channel before creating a recurring task.
+- [ ] Enable the free built-in analytics script with the injected site ID and endpoint.
+- [ ] Update privacy.html with clear analytics disclosure and retention wording.
+- [x] Verify the analytics script is present and save a checkpoint.
+- [x] Add 12 user-supplied wall photos to the archive as a dedicated «Стены» category.
+- [x] Make the «Стены» filter show only the 12 user-supplied photos.
+- [x] Verify wall-photo lightbox and mobile layout before checkpointing.
+- [x] Add the new unique user-supplied wall-photo files to the existing «Стены» category.
+- [x] Deduplicate repeated attachments and verify all new WebP URLs.
+- [x] Recheck the «Стены» filter and archive layout before checkpointing.
+- [x] Audit and redesign the site architecture without losing existing portfolio assets.
+- [x] Rebuild the main experience with stronger services, case-study navigation, and contact conversion.
+- [x] Validate mobile, SEO, performance, analytics, and archive filtering.
+- [x] Save the new rebuild checkpoint and replace the published version.
+- [x] Add a client brief form with required city, contact, wall size, and expected budget fields plus optional project details.
+- [x] Build a privacy-light mailto submission flow without server-side storage.
+- [x] Verify validation, mailto payload, and mobile form layout.
+- [x] Add an animated brief-success modal with an honest mail-prepared status and close action.
+- [x] Verify keyboard access, reduced-motion behavior, and mobile modal layout.
+- [x] Validate required city, contact, wall size, and budget fields before mailto and success dialog.
+- [x] Show clear inline validation feedback and focus the first invalid field.
+- [x] Add Russian phone mask `+7 (999) 123-45-67` and email format validation in the contact field.
+- [x] Verify invalid contact blocks mailto and valid phone/email allow the success dialog.
+- [x] Add a Phone/Email contact-method toggle with method-specific placeholder and validation.
+- [x] Verify both contact methods on desktop and mobile before checkpointing.
+- [x] Replace the public EffectGraff phone number with +7 (995) 590-10-63 in all contact surfaces.
+- [x] Verify the updated phone link and displayed number before checkpointing.
+- [x] Add Russian/English language switching while preserving the Russian version.
+- [x] Translate primary navigation, hero, services, archive, contact brief, and success states into English.
+- [x] Add English SEO metadata and verify Russian/English layouts on desktop and mobile.
+- [x] Add reciprocal hreflang tags for Russian and English URL variants.
+- [x] Add language-specific canonical URLs and separate sitemap entries.
+- [x] Verify sitemap, robots, legal URLs, and published SEO markup.
+- [x] Prepare a free organic promotion plan and content calendar.
+- [x] Audit free organic discovery channels and current SEO readiness.
+- [x] Improve metadata and landing copy for commercial graffiti and festival searches.
+- [ ] Prepare bilingual social/profile promotion copy without paid or unsolicited distribution.
+- [x] Add the confirmed VK profile https://vk.ru/effectgraff to social contacts and structured data.
+- [x] Verify the public VK group identifier and news-widget integration method.
+- [x] Add an adaptive VK news widget to the home page and update CSP/privacy disclosures.
+- [x] Verify the widget on Russian and English mobile/desktop layouts.
+- [x] Fix VK API initialization timing on the public domain after cookie consent.
+- [x] Verify production widget content and fallback behavior before a new checkpoint.
+- [x] Replace the dynamic VK widget with a static bilingual VK community card.
+- [x] Test current Manus-domain availability from the available network perspective; provider-level Russian testing remains required.
+- [x] Evaluate a .ru/.рф domain and Russia-accessible hosting as an optional mirror or migration path.
+- [x] Choose a free external static-hosting platform for the mirror.
+- [x] Prepare a portable static code package and deployment configuration.
+- [x] Verify platform/account requirements and explain remaining user action.
+- [x] Compare .ru custom-domain connection to Manus with Russian static hosting.
+- [x] Document DNS, HTTPS, canonical, sitemap, redirect, and cost implications.
+- [x] Recommend a primary .ru setup and migration sequence.
+- [x] Check whether effectgraff.ru is registered and has active DNS records; currently no DNS resolution is present.
+- [ ] Prepare effectgraff.ru canonical, sitemap, and deployment configuration after hosting is selected.
+- [x] Create a Yandex Object Storage CI/CD workflow without embedded secrets.
+- [x] Document one-time secret, bucket, HTTPS, and DNS setup for effectgraff.ru.
+- [x] Validate the workflow syntax and identify the remaining account confirmation step.
+- [x] Compare manual upload, Git-based CI/CD, and scheduled synchronization options.
+- [x] Define secure build, deployment token, DNS, HTTPS, and rollback flow.
+- [x] Prepare provider-neutral deployment instructions without exposing credentials.
+- [ ] Verify the owner must complete registrar/hosting authorization and DNS changes.
+- [ ] Use accessible cloud-effectgraff instead of the inaccessible earlier cloud.
+- [ ] Confirm billing account requirement before creating or uploading to the bucket.
+- [ ] Verify bucket, static hosting, public read, upload, DNS and HTTPS in the accessible cloud.
+- [ ] Create a least-privilege service account for effectgraff.ru uploads.
+- [ ] Create an access key without exposing secret material in chat.
+- [ ] Recreate the deleted Yandex access key and save it only locally.
+- [ ] Reconfigure the macOS AWS CLI profile after key rotation.
+- [ ] Identify why role assignment to the default folder is unavailable.
+- [ ] Assign the minimum storage role directly at bucket scope if folder scope is blocked.
+- [ ] Write a detailed Yandex Cloud navigation guide with exact fields and values.
+- [ ] Include Windows and macOS/Linux local upload commands and verification URLs.
+- [ ] Upload dist/public via S3 API and verify the website endpoint.
+- [x] Prepare a clean direct-to-Yandex computer guide without requiring GitHub.
+- [x] Provide build and S3 upload commands for Windows and macOS/Linux.
+- [x] Include exact file list, Yandex bucket settings, HTTPS/DNS and verification steps.
+- [ ] Confirm the user's operating system and local CLI installation path.
+- [ ] Provide safe Yandex CLI auth, cloud/folder, bucket, hosting, and upload commands.
+- [ ] Verify HTTPS/DNS and prepare CI/CD secrets after the first manual upload.
+- [x] Complete final build/workflow validation for the requested end-to-end launch.
+- [x] Recheck effectgraff.ru DNS and HTTPS before asking for account authorization; domain is still unresolved.
+- [x] Prepare the minimal owner-authentication handoff for registrar, hosting, and CI secrets.
+- [x] Create a portable repository package for external GitHub/SourceCraft import.
+- [x] Verify workflow and deployment files are included without secrets.
+- [x] Provide the external repository creation link and remaining owner action.
+- [x] Avoid claiming VPN-free access without provider-level verification.
+- [x] Remove unnecessary VK external-script CSP/privacy dependencies and verify RU/EN responsive layouts.
+- [x] Verify VK profile link on Russian and English versions before checkpointing.
+- [x] Remove the active Instagram profile link from the contact section.
+- [x] Remove Instagram lead-tracking references and verify no active Instagram URL remains.
+- [x] Add only a VK share button; do not add Telegram, WhatsApp, Facebook, native Share API, or copy-link controls.
+- [x] Track VK share actions without collecting visitor-entered personal data.
+- [x] Verify the VK share control on Russian/English mobile and desktop layouts.
+- [ ] Audit current SEO metadata, canonical, sitemap, structured data, headings, and mobile presentation.
+- [ ] Build prioritized keyword clusters for commercial graffiti, murals, festivals, open calls, and artist collective searches.
+- [ ] Record official search-engine guidance and sources for the SEO recommendations.
+- [x] Add lead analytics events for CTA, email, phone, Instagram, and brief submission.
+- [x] Verify event instrumentation without collecting form field contents or personal data.
+- [ ] Save a checkpoint with the lead analytics setup.
+- [x] Add free security headers and a restrictive Content Security Policy.
+- [x] Add clickjacking, MIME-sniffing, referrer, and permissions protections.
+- [x] Verify no private secrets are exposed in the client and document security limits.
+- [x] Confirm the current public Manus domain as the permanent website address.
+- [x] Run a final stability and lead-contact check before the permanent checkpoint.
+- [ ] Verify the final public URL after the domain change.
+- [ ] Verify Yandex bucket endpoint and uploaded objects before DNS changes.
+- [ ] Create and validate HTTPS certificate for effectgraff.ru.
+- [ ] Create a managed Certificate Manager certificate for effectgraff.ru.
+- [ ] Add the generated DNS validation record at REG.RU.
+- [ ] Attach the issued certificate to the Object Storage bucket and verify HTTPS.
+- [ ] Prepare DNS records and verify the domain without hard-coding Manus IPs.
+- [ ] Determine the correct Yandex domain-validation and hosting DNS targets.
+- [ ] Document REG.RU DNS entries and conflict removal for effectgraff.ru.
+- [ ] Verify DNS propagation and HTTPS certificate issuance.
+- [ ] Recheck the certificate after the first DNS challenge attempt failed.
+- [ ] Remove the two separate validating certificates for root and www after confirmation.
+- [ ] Remove stale _acme-challenge DNS records before recreating one combined certificate.
+- [ ] Create one managed certificate covering effectgraff.ru and www.effectgraff.ru.
+- [ ] Confirm no conflicting TXT/CNAME record exists for _acme-challenge.
+- [ ] Try TXT validation as the alternative to the failing CNAME challenge.
+- [ ] Verify exact TXT values for both effectgraff.ru and www.effectgraff.ru.
+- [ ] Execute available Yandex Cloud setup actions without handling user secrets.
+- [ ] Use the simplified direct-copy route into the existing Yandex bucket.
+- [ ] Verify the static build contains index.html and all assets before upload.
+- [ ] Upload the complete build and verify the copied site endpoint.
+- [ ] Stop before CAPTCHA, payment, DNS, certificate, or other sensitive confirmations.
+- [ ] Verify the final domain only after user confirmations and local upload.
+- [ ] Save a final checkpoint before publication.
+- [x] Add a bilingual cookie-consent banner with accept and reject actions.
+- [x] Gate analytics loading and custom lead events behind consent.
+- [x] Update Russian and English privacy pages and verify the banner on mobile.
+- [ ] User confirms any paid domain purchase in Management UI.
+- [ ] User clicks Publish in the Management UI and optionally connects the confirmed custom domain.
+
+- [ ] Diagnose ERR_CERT_COMMON_NAME_INVALID on www.effectgraff.ru.
+- [ ] Confirm www DNS target and certificate SAN coverage.
+- [ ] Correct the www binding without touching mail or root DNS records.
+
+- [ ] Recheck www DNS and live TLS after the CNAME switch.
+- [ ] Resolve remaining ERR_CERT_COMMON_NAME_INVALID without changing mail or root records.
+- [ ] Fix Yandex custom-domain TLS binding: current certificate is *.storage-1.yandexcloud.net and does not match www.effectgraff.ru.
+- [ ] Recheck SNI certificate and HTTPS after binding the effectgraff.ru certificate.
+- [ ] Automate Yandex Object Storage HTTPS binding with yc storage bucket set-https.
+- [ ] Use existing certificate effectgraff-ru-cert and preserve DNS/mail records.
+- [ ] Verify live SNI certificate after the automated binding.
+- [ ] Diagnose why live SNI still returns *.storage-1.yandexcloud.net after successful set-https.
+- [ ] Check DNS target, bucket HTTPS state, custom-domain conflict, and activation delay.
+- [ ] Apply only the minimal TLS edge fix; preserve DNS and mail records.
+- [ ] Create bucket www.effectgraff.ru only after confirming exact CLI redirect syntax.
+- [ ] Attach effectgraff-ru-cert to www bucket and configure redirect to https://effectgraff.ru.
+- [ ] Update only www DNS target and verify TLS/redirect.
+- [ ] Switch root effectgraff.ru from REG.RU A 31.31.196.172 to Yandex root endpoint.
+- [ ] Preserve mail, smtp, pop, ftp, MX, ACME, and www records.
+- [ ] Verify root HTTPS serves the EffectGraff site after DNS propagation.
+- [ ] Determine whether REG.RU authoritative DNS exposes an API or supports ANAME/ALIAS for apex.
+- [ ] Do not change root A or nameservers until all mail records are preserved.
+- [ ] If needed, prepare Yandex Cloud DNS zone and records without switching delegation yet.
+
+- [ ] Restore all image assets referenced by the copied index.html into www.effectgraff.ru.
+- [ ] Restore the loop audio asset and verify the play button event on mobile and desktop.
+- [ ] Verify no missing asset requests remain after the Yandex migration.
+
+- [ ] Find an accessible original source for the missing /manus-storage media.
+- [ ] Do not rerun the failed 404 media script unchanged.
+- [ ] Restore images and WAV only after source availability is confirmed.
+
+- [ ] Audit Russian legal/privacy requirements for the public site and lead form.
+- [ ] Audit security headers, TLS, CSP, cookies, analytics, robots, sitemap, and structured data.
+- [ ] Audit public media, audio, mobile/desktop rendering, and missing resources.
+- [ ] Prepare compliant organic SEO and monitoring actions without spam or fake traffic.
+
+- [ ] Verify the official Roskomnadzor notification procedure for a self-employed website operator processing lead-form data.
+- [ ] Keep the operator's address unpublished until legal consultation and document this limitation transparently.
+- [ ] Update privacy/legal pages with the confirmed operator identity without claiming full compliance prematurely.
+
+- [ ] Align homepage purpose and SEO copy with portfolio discovery, project geography, and qualified lead generation.
+- [ ] Ensure every primary CTA leads to a clear brief, email, phone, or VK contact path.
+- [ ] Measure only consent-based, privacy-safe conversion events relevant to potential collaboration.
+
+- [ ] Add https://www.effectgraff.ru to Yandex Webmaster.
+- [ ] Verify ownership using a safe available method.
+- [ ] Submit https://www.effectgraff.ru/sitemap.xml and record processing status.
+
+- [ ] Regenerate the vertical video using current EffectGraff.ru visual references and exact short website phrases.
+- [ ] Verify the final video remains 10 seconds, portrait, and free of private technical details.
+
+- [ ] Map free SEO, analytics, lead-capture, security, and content-distribution tools for EffectGraff.ru.
+- [ ] Define compliant lead events and conversion reporting.
+- [ ] Prepare a non-spam organic promotion workflow and maintenance schedule.
+
+- [ ] Produce a professional now/this-week/ongoing action plan for SEO, analytics, lead generation, security, and legal follow-up.
+- [ ] Distinguish completed tasks, owner actions, and items requiring account access or legal advice.
+
+- [ ] Draft a universal EffectGraff partnership proposal for email/VK outreach.
+- [ ] Add 10 suitable partner categories with a tailored collaboration angle for each.
+- [ ] Include compliant outreach guidance without spam or fabricated claims.
+
+- [ ] Research 10 concrete organizations relevant to murals, urban art, events, venues, brands, or development.
+- [ ] Verify each organization through an official website or official public contact page.
+- [ ] Prepare a personalized outreach angle and public contact link for each organization.
+
+- [ ] Create an Apple Numbers-compatible partner CRM table with verified contacts and outreach tracking fields.
+- [ ] Include status, next action, follow-up date, and outcome columns for manager use.
+
+- [ ] Recheck live HTTPS/DNS/security/SEO endpoints for effectgraff.ru.
+- [ ] Capture mobile and desktop visual checks.
+- [ ] Verify media, CTA, brief form, audio loop, and public links.
+- [ ] Summarize verified results and remaining owner-side checks.
+
+- [ ] Explain why short-term risk-free doubling of 2.3m RUB is not realistic.
+- [ ] Compare capital-preservation, moderate-risk, and high-risk scenarios using current official information.
+- [ ] Provide a clear recommendation without executing trades or transfers.
+
+- [ ] Diagnose current lead-generation funnel and traffic sources.
+- [ ] Define demand-specific offers and landing scenarios for walls, murals, festivals, and collaborations.
+- [ ] Set up measurable lead events and a manager response workflow.
+- [ ] Prepare a compliant 30-day content and partner outreach process.
+
+- [ ] Define exact Yandex Metrica goal names and event IDs without personal data.
+- [ ] Provide implementation snippets and dashboard setup text.
+- [ ] Provide a privacy-safe test checklist for each lead event.
+
+- [ ] Define CRM MVP, roles, lead stages, and data-retention boundaries.
+- [ ] Upgrade the static project to full-stack with database and authentication.
+- [ ] Implement protected lead CRUD, follow-up tasks, notes, and audit history.
+- [ ] Add a responsive manager dashboard and connect valid brief submissions.
+- [ ] Verify authorization, privacy, validation, and mobile workflows before publishing.
+
+- [x] Upgrade project to full-stack React + tRPC + Drizzle + auth template.
+- [x] Add CRM schema for leads, leadTasks, and leadNotes and apply database migration.
+- [x] Add public leads.create procedure with validation, honeypot, and explicit consent.
+- [x] Add admin-only lead list, status, notes, and task procedures.
+- [x] Build responsive /crm manager interface using DashboardLayout.
+- [x] Add /crm routing and CRM navigation entry.
+- [x] Connect the public bilingual brief form to CRM lead creation.
+- [x] Add consent and disabled-submit styling to the brief form.
+- [x] Add Vitest coverage for lead creation validation and admin-only access.
+- [x] Verify TypeScript, tests, production build, and CRM desktop preview.
+- [ ] Verify authenticated owner flow with real OAuth session and create a production lead from the public form.
+- [x] Verify the owner user is already promoted to admin in the production database.
+- [ ] Add encrypted CRM backup/export policy and retention review with a legal/accounting advisor.
+- [x] Update brief success modal copy from mail-prepared wording to CRM-saved wording in Russian and English.
+
+- [x] Diagnose current 404 on www.effectgraff.ru reported by the owner.
+- [x] Verify www.effectgraff.ru points to Yandex static hosting; Manus serves the full-stack route separately.
+- [x] Confirm the public root page remains HTTP 200 without changing mail, MX, or unrelated DNS records.
+- [x] Verify www root, Manus root, and Manus /crm responses; Yandex /crm remains static-hosting limited pending upload.
+- [ ] Handle malformed `/crm%60` URL gracefully instead of showing a 404 page.
+- [x] Add a bilingual static 404 page for Yandex mirror with links to the public homepage and full-stack CRM manager URL.
+- [ ] Sync dist/public/404.html and dist/public/crm/index.html to the Yandex bucket via the configured GitHub Actions workflow or manual S3 upload; current session has no GitHub integration.
+- [x] Enable the GitHub connector for the current task through the Management UI.
+- [ ] Trigger the existing deploy-yandex workflow after GitHub integration is enabled.
+- [ ] Verify the workflow uploads the current dist/public, including 404.html and crm/index.html, to Yandex.
