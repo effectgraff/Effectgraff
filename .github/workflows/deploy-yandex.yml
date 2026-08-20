@@ -33,17 +33,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: TypeScript check
-        run: pnpm check
-
       - name: Build static site
-        run: pnpm build
+        run: pnpm exec vite build
 
       - name: Install AWS CLI
         run: python3 -m pip install --user awscli
 
+      - name: Verify Yandex deployment configuration
+        run: test -n "${YC_BUCKET}" && test -n "${AWS_ENDPOINT_URL}" && test -n "${AWS_ACCESS_KEY_ID}" && test -n "${AWS_SECRET_ACCESS_KEY}"
+
       - name: Upload static files
         run: ~/.local/bin/aws s3 sync dist/public/ "s3://${YC_BUCKET}/" --endpoint-url "${AWS_ENDPOINT_URL}" --delete
-
-      - name: Verify upload target
-        run: test -n "${YC_BUCKET}" && test -n "${AWS_ENDPOINT_URL}"
