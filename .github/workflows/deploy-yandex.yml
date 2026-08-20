@@ -41,6 +41,13 @@ jobs:
         run: |
           mkdir -p dist/public/manus-storage
           {
+            printf '%s\n' \
+              eg-club-logo-1_42f150e4.png \
+              effectgraff-calm-ethno-loop_ebebb5c1.wav \
+              page-02_1604826d.webp page-05_8f0a7114.webp page-07_4164bd5e.webp \
+              page-08_b1faf415.webp page-10_b7dc6ffb.webp page-14_d3cc171c.webp \
+              page-17_9cc55f2f.webp page-21_c54060e5.webp page-25_479c2f9d.webp \
+              page-30_8eaf99a8.webp page-31_7885a7f0.webp
             grep -oE '"/manus-storage/[^"]+\.(webp|png|wav)"' client/src/pages/Home.tsx | sed -E 's#^"/manus-storage/([^\"]+)"$#\1#'
             grep -oE '"(img_|wall-)[^"]+\.webp"' client/src/pages/Home.tsx | tr -d '"'
             grep -oE '[0-9]{1,2}: "[a-f0-9]+"' client/src/pages/Home.tsx | sed -E 's/([0-9]{1,2}): "([a-f0-9]+)"/page-\1_\2.webp/' | sed -E 's/page-([0-9])_/page-0\1_/'
