@@ -37,13 +37,21 @@ jobs:
       - name: Build static site
         run: pnpm exec vite build
 
-      - name: Download wall assets for Yandex mirror
+      - name: Download all media assets for Yandex mirror
         run: |
           mkdir -p dist/public/manus-storage
-          grep -oE '"(img_|wall-)[^"]+\.webp"' client/src/pages/Home.tsx | tr -d '"' | sort -u | while read -r file; do
+          {
+            grep -oE '"/manus-storage/[^"]+\.(webp|png|wav)"' client/src/pages/Home.tsx | sed -E 's#^"/manus-storage/([^\"]+)"$#\1#'
+            grep -oE '"(img_|wall-)[^"]+\.webp"' client/src/pages/Home.tsx | tr -d '"'
+            grep -oE '[0-9]{1,2}: "[a-f0-9]+"' client/src/pages/Home.tsx | sed -E 's/([0-9]{1,2}): "([a-f0-9]+)"/page-\1_\2.webp/' | sed -E 's/page-([0-9])_/page-0\1_/'
+          } | sort -u | while read -r file; do
+            test -n "${file}" || continue
             curl --fail --location --retry 3 "https://effectport-5rhal3bg.manus.space/manus-storage/${file}" \
               --output "dist/public/manus-storage/${file}"
           done
+          test -f dist/public/manus-storage/eg-club-logo-1_42f150e4.png
+          test -f dist/public/manus-storage/page-01_d1846c42.webp
+          test -f dist/public/manus-storage/img_2012_afd076d4.webp
 
       - name: Install AWS CLI
         run: python3 -m pip install --user awscli
