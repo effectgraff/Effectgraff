@@ -46,7 +46,8 @@ jobs:
             grep -oE '[0-9]{1,2}: "[a-f0-9]+"' client/src/pages/Home.tsx | sed -E 's/([0-9]{1,2}): "([a-f0-9]+)"/page-\1_\2.webp/' | sed -E 's/page-([0-9])_/page-0\1_/'
           } | sort -u | while read -r file; do
             test -n "${file}" || continue
-            curl --fail --location --retry 3 "https://effectport-5rhal3bg.manus.space/manus-storage/${file}" \
+            echo "Downloading ${file}"
+            curl --fail --location --retry 8 --retry-all-errors --connect-timeout 30 --max-time 180 "https://effectport-5rhal3bg.manus.space/manus-storage/${file}" \
               --output "dist/public/manus-storage/${file}"
           done
           test -f dist/public/manus-storage/eg-club-logo-1_42f150e4.png
