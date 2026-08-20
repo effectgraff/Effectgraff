@@ -1,0 +1,50 @@
+name: Build and deploy EffectGraff to Yandex Object Storage
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      AWS_EC2_METADATA_DISABLED: "true"
+      AWS_DEFAULT_REGION: ru-central1
+      AWS_ENDPOINT_URL: ${{ secrets.YC_ENDPOINT }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+      YC_BUCKET: ${{ secrets.YC_BUCKET }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Enable pnpm
+        run: corepack enable
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: TypeScript check
+        run: pnpm check
+
+      - name: Build static site
+        run: pnpm build
+
+      - name: Install AWS CLI
+        run: python3 -m pip install --user awscli
+
+      - name: Upload static files
+        run: ~/.local/bin/aws s3 sync dist/public/ "s3://${YC_BUCKET}/" --endpoint-url "${AWS_ENDPOINT_URL}" --delete
+
+      - name: Verify upload target
+        run: test -n "${YC_BUCKET}" && test -n "${AWS_ENDPOINT_URL}"
