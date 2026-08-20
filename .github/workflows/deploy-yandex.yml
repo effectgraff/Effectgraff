@@ -18,6 +18,7 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
       YC_BUCKET: ${{ secrets.YC_BUCKET }}
+      YC_WWW_BUCKET: www.effectgraff.ru
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -50,5 +51,8 @@ jobs:
       - name: Verify Yandex deployment configuration
         run: test -n "${YC_BUCKET}" && test -n "${AWS_ACCESS_KEY_ID}" && test -n "${AWS_SECRET_ACCESS_KEY}"
 
-      - name: Upload static files
+      - name: Upload static files to primary bucket
         run: ~/.local/bin/aws s3 sync dist/public/ "s3://${YC_BUCKET}/" --endpoint-url "${AWS_ENDPOINT_URL}" --delete
+
+      - name: Upload static files to www bucket
+        run: ~/.local/bin/aws s3 sync dist/public/ "s3://${YC_WWW_BUCKET}/" --endpoint-url "${AWS_ENDPOINT_URL}" --delete
