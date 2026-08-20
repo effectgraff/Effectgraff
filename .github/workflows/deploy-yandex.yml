@@ -36,6 +36,14 @@ jobs:
       - name: Build static site
         run: pnpm exec vite build
 
+      - name: Download wall assets for Yandex mirror
+        run: |
+          mkdir -p dist/public/manus-storage
+          grep -oE '"(img|wall)-[^"]+\.webp"' client/src/pages/Home.tsx | tr -d '"' | sort -u | while read -r file; do
+            curl --fail --location --retry 3 "https://effectport-5rhal3bg.manus.space/manus-storage/${file}" \
+              --output "dist/public/manus-storage/${file}"
+          done
+
       - name: Install AWS CLI
         run: python3 -m pip install --user awscli
 
