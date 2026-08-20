@@ -14,7 +14,7 @@ jobs:
     env:
       AWS_EC2_METADATA_DISABLED: "true"
       AWS_DEFAULT_REGION: ru-central1
-      AWS_ENDPOINT_URL: ${{ secrets.YC_ENDPOINT }}
+      AWS_ENDPOINT_URL: https://storage.yandexcloud.net
       AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
       YC_BUCKET: ${{ secrets.YC_BUCKET }}
@@ -40,7 +40,7 @@ jobs:
         run: python3 -m pip install --user awscli
 
       - name: Verify Yandex deployment configuration
-        run: test -n "${YC_BUCKET}" && test -n "${AWS_ENDPOINT_URL}" && test -n "${AWS_ACCESS_KEY_ID}" && test -n "${AWS_SECRET_ACCESS_KEY}"
+        run: test -n "${YC_BUCKET}" && test -n "${AWS_ACCESS_KEY_ID}" && test -n "${AWS_SECRET_ACCESS_KEY}"
 
       - name: Upload static files
         run: ~/.local/bin/aws s3 sync dist/public/ "s3://${YC_BUCKET}/" --endpoint-url "${AWS_ENDPOINT_URL}" --delete
